@@ -1,6 +1,13 @@
 defaultStorageMapping: MCAMAINBRANCH
 installedPackages: {}
-jobs: {}
+jobs:
+  Job-1:
+    excludeSelector: "{ location: SOURCE name: NATION }"
+    id: 1
+    includeSelector: "{ location: MCAMAINBRANCH name: STG_CUSTOMER } OR { location: MCAMAINBRANCH name: STG_ORDERS } OR { location: SOURCE name: LINEITEM } OR { location: SOURCE name: CUSTOMER } OR { location: MCAMAINBRANCH name: DIM_CUSTOMER } OR { location: SOURCE name: NATION } OR { location: SOURCE name: ORDERS }"
+    name: Job_1
+    steps: []
+    subgraphs: []
 locations:
   MCAMAINBRANCH:
     mappingDefinitions:
